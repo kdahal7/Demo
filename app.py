@@ -36,3 +36,7 @@ def run_query(req: QueryRequest, authorization: str = Header(None)):
         answers.append(answer["justification"])
 
     return {"answers": answers}
+
+@app.get("/")
+def home():
+    return {"message": "FastAPI HackRx backend is running!"}
